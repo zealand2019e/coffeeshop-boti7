@@ -12,19 +12,28 @@ namespace CoffeeShopConsoleApp
             // a list of all the orders for coffe in the coffee shop
             List<Coffee> orderList = new List<Coffee>()
             {
-                new Coffee(),
-                new Coffee(),
-                new Coffee()
-
+                new BlackCoffee(0),
+                new Cortado(10),
+                new Latte(10)
             };
-
 
             foreach (var coffee in orderList)
             {
-                Console.WriteLine("the Price of the coffee is : "+ coffee.price());
+                Console.WriteLine("Price: " + coffee.price() + " Strength: " + coffee.Strength());
             }
 
+            List<Milk> milkOrderList = new List<Milk>()
+            {
+                new Cortado(10),
+                new Latte(10)
+            };
 
+            Console.WriteLine("");
+            Console.WriteLine("Coffee with milk:");
+            foreach (var coffee in milkOrderList)
+            {
+                Console.WriteLine("Milk: " + coffee.mlMilk() + " ml");
+            }
         }
     }
 }

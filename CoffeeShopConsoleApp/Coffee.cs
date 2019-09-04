@@ -7,8 +7,15 @@ namespace CoffeeShopConsoleApp
     /// <summary>
     /// A class that is used for coffe orders
     /// </summary>
-    public class Coffee
+    public abstract class Coffee
     {
+        public int Discount {get; set;}
+
+        public Coffee(int discount)
+        {
+            this.Discount = discount;
+        }
+
         /// <summary>
         /// returns the price of the coffee
         /// It's possible to override this method, beacuse it is virtual 
@@ -19,5 +26,6 @@ namespace CoffeeShopConsoleApp
             return 20;
         }
 
+        public abstract string Strength();
     }
 }
