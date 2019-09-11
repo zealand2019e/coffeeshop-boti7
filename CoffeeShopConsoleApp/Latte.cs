@@ -12,7 +12,7 @@ namespace CoffeeShopConsoleApp
 
         public override int price()
         {
-            return 40;
+            return 40 - this.Discount;
         }
 
         public override string Strength()

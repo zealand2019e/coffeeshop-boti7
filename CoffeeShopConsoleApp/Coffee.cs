@@ -13,6 +13,12 @@ namespace CoffeeShopConsoleApp
 
         public Coffee(int discount)
         {
+            if (discount > 5)
+            {
+                throw new ArgumentException(String.Format("{0} is too big discount.", discount),
+                    "discount");
+            }
+
             this.Discount = discount;
         }
 
@@ -23,7 +29,7 @@ namespace CoffeeShopConsoleApp
         /// <returns>20 dkr</returns>
         public virtual int price()
         {
-            return 20;
+            return 20 - this.Discount;
         }
 
         public abstract string Strength();
