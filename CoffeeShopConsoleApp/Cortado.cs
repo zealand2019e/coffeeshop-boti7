@@ -8,6 +8,8 @@ namespace CoffeeShopConsoleApp
     {
         public Cortado(int discount) : base(discount) {}
 
+        public Cortado() : base(0) {}
+
         public override int price()
         {
             return 25;

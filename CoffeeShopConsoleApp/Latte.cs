@@ -8,6 +8,8 @@ namespace CoffeeShopConsoleApp
     {
         public Latte(int discount) : base(discount) {}
 
+        public Latte() : base(0) {}
+
         public override int price()
         {
             return 40;

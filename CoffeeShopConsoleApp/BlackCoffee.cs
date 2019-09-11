@@ -8,6 +8,8 @@ namespace CoffeeShopConsoleApp
     {
         public BlackCoffee(int discount) : base(discount) {}
 
+        public BlackCoffee() : base(0) {}
+
         public override string Strength()
         {
             return "Strong";
